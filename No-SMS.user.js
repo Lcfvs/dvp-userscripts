@@ -4,7 +4,7 @@
 // @licence       MIT
 // @description   Rewrites the SMS by true words
 // @include       http://chat.developpez.com/*
-// @version       0.9.1
+// @version       0.9.2
 // @downloadURL   https://raw.githubusercontent.com/Lcfvs/dvp-userscripts/master/No-SMS.user.js
 // @updateURL     https://raw.githubusercontent.com/Lcfvs/dvp-userscripts/master/No-SMS.user.js
 // @website       https://github.com/Lcfvs/dvp-userscripts
@@ -127,7 +127,8 @@ void function (callback) {
             iterator,
             sms,
             word,
-            isGod;
+            isGod,
+            previousWord;
 
         words = data.split(' ');
         length = words.length;
