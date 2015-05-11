@@ -4,7 +4,7 @@
 // @licence       MIT
 // @description   Rewrites the SMS by true words
 // @include       http://chat.developpez.com/*
-// @version       0.9.0
+// @version       0.9.1
 // @downloadURL   https://raw.githubusercontent.com/Lcfvs/dvp-userscripts/master/No-SMS.user.js
 // @updateURL     https://raw.githubusercontent.com/Lcfvs/dvp-userscripts/master/No-SMS.user.js
 // @website       https://github.com/Lcfvs/dvp-userscripts
@@ -142,15 +142,22 @@ void function (callback) {
                 isGod = sms === 'dieu'
                 && word === god;
 
-              if (isGod) {
-                  if (words[iterator - 1] === 'de') {
-                      words[iterator - 1] = '';
-                  }
-
-                  word = decodeURIComponent(word);
+                if (iterator && isGod) {
+                    previousWord = words[iterator - 1];
+                    word = decodeURIComponent(word);
+                    
+                    if (previousWord === 'de') {
+                        words[iterator - 1] = '';
+                        word = 'd\'' + word;
+                    }
+                    
+                    if (previousWord === 'que') {
+                        words[iterator - 1] = '';
+                        word = 'qu\'' + word;
+                    }
                 }
 
-                words[iterator] = 'd\'' + word;
+                words[iterator] = word;
             }
         }
 
