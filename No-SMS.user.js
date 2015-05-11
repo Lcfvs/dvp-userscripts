@@ -5,8 +5,8 @@
 // @description   Rewrites the SMS by true words
 // @include       http://chat.developpez.com/*
 // @version       0.9.0
-// @downloadURL   https://raw.githubusercontent.com/Lcfvs/dvp-userscripts/No-SMS.user.js
-// @updateURL     https://raw.githubusercontent.com/Lcfvs/dvp-userscripts/No-SMS.user.js
+// @downloadURL   https://raw.githubusercontent.com/Lcfvs/dvp-userscripts/master/No-SMS.user.js
+// @updateURL     https://raw.githubusercontent.com/Lcfvs/dvp-userscripts/master/No-SMS.user.js
 // @website       https://github.com/Lcfvs/dvp-userscripts
 // ==/UserScript==
 void function (callback) {
